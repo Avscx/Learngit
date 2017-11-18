@@ -1,17 +1,20 @@
 # GIT使用笔记
 ## 各系统平台安装git
-    linux：使用命令git
+    linux：
+	使用命令:
     sudo apt-get install git
-	分支：（debian、unbuntu linux):sudo apt-get git-core
+	分支：（debian、unbuntu linux):
+	sudo apt-get git-core
     Max os:
-    通过homebrew安装git，教程http://brew.sh/
+    通过homebrew安装git，[教程]http://brew.sh/
 	通过xcode-preferences-downloads-command Line tools安装
     Windows:
           1.下载mysysgit
-		  2.设置身份：(git Bash)
-		  3.git config --global user.name "your name“
-		  4.git config --global user.email "your email address"
-##创建版本库（本机）
+          2.设置身份：(git Bash)
+          3.git config --global user.name "your name“
+          4.git config --global user.email "your email address" 
+		  
+## 创建版本库（本机）
      选择一个地方，创建一个空目录
      1.mkdir 目录name
      2.cd    目录name
@@ -21,7 +24,8 @@
      添加一个文本文件：（windows下由于编码问题不能用自带笔记本编辑，可使用Notepad ++) 
      提交到暂存区:git add 文件名字
      提交到版本库（只能跟踪文本文件如txt的改动，Microsofe的word由于使用二进制编辑不能跟踪改动）:git commit -m "备注”
-##时光穿梭机
+	 
+## 时光穿梭机
      查看仓库当前状态:git status
      查看当前修改与上一次修改的difference：git diff
      查看历史记录：git log 查看历史记录（简化）：git log --pretty=online
@@ -36,7 +40,7 @@
  
      注意点:只有添加（git add）到暂存区的文件才能提交（git commit）到版本库
 
-##远程仓库
+## 远程仓库
      创建SSH KEY（可在用户主目录下查看有无.ssh目录（包含id_rsa（私钥）\id_rsa.pub（公钥）))若无,在git Bash输入命令：ssh-keygen -t rsa -C “邮件地址”
      最后
      将ssh key中的id_rsa.pub添加到github上的ssh keys中，便可向github推送文件（公开）
